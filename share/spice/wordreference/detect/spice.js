@@ -22,7 +22,7 @@ function ddg_spice_wordreference_detect(ir) {
 	word   = params[0];
 	to     = params[1];
 
-	nrj('/js/spice/wordreference/translate/' + from + to + '/' + word);
+	nrj("/js/spice/wordreference/translate/" + from + to + "/" + word);
 }
 
 function ddg_spice_wordreference_translate(ir) {

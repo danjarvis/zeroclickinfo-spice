@@ -8,7 +8,6 @@ attribution github  => ['https://github.com/ghedo', 'ghedo'      ],
 my $dicts = 'arabic|ar|chinese|zh|czech|cz|english|en|french|fr|greek|gr|italian|it|japanese|ja|korean|ko|polish|pl|portuguese|pt|romanian|ro|spanish|es|turkish|tr';
 
 spice to   => 'http://ws.detectlanguage.com/0.2/detect?q=$1&key={{ENV{DDG_SPICE_DETECTLANGUAGE_APIKEY}}}';
-spice from => '([a-z]+)\/([a-z]+)';
 spice wrap_jsonp_callback => 1;
 
 triggers query_lc => qr/^translate ([a-z]+) to ($dicts)$/;
