@@ -41,8 +41,10 @@ handle query_lc => sub {
 	s/ //g;
 	$code = $_;
 
-	return uri_escape(uc($code)), $countries{lc ($country)} unless !defined $countries{lc ($country)};
-	return uri_escape(uc($code)), $country if defined $country;
+	if (defined($country)) {
+		return uri_escape(uc($code)), $countries{lc ($country)} unless !defined $countries{lc ($country)};
+		return uri_escape(uc($code)), $country;
+	}
 	return (uc $code, 'ZZ') if defined $code;
 	return;
 };
